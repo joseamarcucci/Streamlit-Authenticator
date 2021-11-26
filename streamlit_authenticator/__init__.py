@@ -160,13 +160,13 @@ class authenticate:
 
             if st.session_state['authentication_status'] != True:
                 if self.location == 'main':
-                    login_form = st.form('Login')
+                    login_form = st.form('Ingresar)
                 elif self.location == 'sidebar':
-                    login_form = st.sidebar.form('Login')
+                    login_form = st.sidebar.form('Ingresar')
 
                 login_form.subheader(self.form_name)
-                self.username = login_form.text_input('Username')
-                self.password = login_form.text_input('Password',type='password')
+                self.username = login_form.text_input('Usuario')
+                self.password = login_form.text_input('Clave',type='password')
 
                 if login_form.form_submit_button('Login'):
                     self.index = None
